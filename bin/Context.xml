@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+	<bean id="autowired" class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean>
+	<bean id="student" class="net.bill99.impl.Student">
+		<property name="name" value="Tom"></property>
+		<property name="age" value="12"></property>
+	</bean>
+	<bean id="car" class="net.bill99.action.Car">
+		<property name="brand" value="红旗"></property>
+		<property name="price" value="12000.0"></property>
+	</bean>
+	<bean id="office" class="net.bill99.action.Office">
+		<property name="officeNo" value="0001"></property>
+	</bean>
+	<bean id="boss" class="net.bill99.action.Boss"></bean>
+	
+	<!--  <context:component-scan base-package="net.bill99.action"></context:component-scan>-->
+	<bean id="randomEmailGenerator" class="net.bill99.action.RandomEmailGenerator" />
+	
+</beans>
